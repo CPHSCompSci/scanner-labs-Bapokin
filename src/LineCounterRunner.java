@@ -9,5 +9,7 @@ public class LineCounterRunner
 {
    public static void main( String args[] )
    {	
-	}
+	   LineCounter a = new LineCounter();
+	   a.everything();
+   }
 }
