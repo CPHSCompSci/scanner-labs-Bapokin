@@ -9,5 +9,6 @@ public class OddEvenCounterRunner
 {
    public static void main(String args[])
    {
+	   OddEvenCounter a = new OddEvenCounter();
 	}
 }
