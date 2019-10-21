@@ -13,22 +13,51 @@ public class LineCounter
 
    public LineCounter()
    {
-	   try {
-			Scanner input = new Scanner(new File("LineCounter.txt"));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	   while(input.hasNextLine()==true)
-		{
-			lineCount++;
-			input.nextLine();
-		}
-		setLine("");
+	   
+	   
    }
 
    public LineCounter(String s)
    {
+	   try {
+			Scanner input = new Scanner(new File("LineCounter.txt"));
+			while(input.hasNextLine())
+			{
+				String line = input.nextLine();
+		   		System.out.println(line);
+		   		int intCount = 0;
+		   		Scanner number = new Scanner(line);
+		   		while(number.hasNextInt())
+		   		{
+		   			intCount++;
+		   			number.nextInt();
+		   		}
+		   		System.out.println("Number of numbers: " + intCount);
+			}
+//			int lineCount = 0;
+//			   while(input.hasNextLine()==true)
+//				{
+//					lineCount++;
+//					input.nextLine();
+//				}
+//			   for(int i = 0; i <= lineCount; i++)
+//				   {
+//				   		String line = input.nextLine();
+//				   		System.out.println(line);
+//				   		int intCount = 0;
+//				   		while(new Scanner(line).hasNextInt())
+//				   		{
+//				   			intCount++;
+//				   		}
+//				   	 System.out.println(intCount);
+//				   	 i++;
+//				   }
+//			  
+//				setLine("");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
    }
 
 	public void setLine(String s)
@@ -54,18 +83,18 @@ public class LineCounter
 //	public void everything() throws FileNotFoundException 
 //	{
 //		Scanner input = new Scanner(new File("LineCounter.txt"));
-		try {
-			input = new Scanner(new File("LineCounter.txt"));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			input = new Scanner(new File("LineCounter.txt"));
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		int lineCount = 0;
-		while(input.hasNextLine()==true)
-		{
-			lineCount++;
-			input.nextLine();
-		}
+//		while(input.hasNextLine()==true)
+//		{
+//			lineCount++;
+//			input.nextLine();
+//		}
 //		ArrayList<String> lineInput = new ArrayList();
 //		for(int i = 0; i <= lineCount; i++) 
 //		{
